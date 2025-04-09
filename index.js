@@ -17,6 +17,9 @@ app.use(cors({
     methods: "GET, POST, PUT, PATCH, DELETE"
 }))
 
+// static
+app.use(express.static("./build"))
+
 app.use(cookieParser(process.env.SECRET_KEY))
 
 app.use(express.urlencoded({ extended: true }))
